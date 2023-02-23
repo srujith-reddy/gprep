@@ -1,0 +1,149 @@
+ *{
+    margin:0rem;
+    padding:0rem;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+
+.wholebody{
+    min-width: 100vw;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.heading{
+    color:#537FE7;
+    font-family: Arial, Helvetica, sans-serif; 
+    text-align: center; 
+    margin:1rem;
+   
+    
+}
+.screenshot{
+    margin-bottom:1rem;
+    padding:0.3em;
+    background-color: rgb(85, 85, 190);
+    color:white;
+    min-width:3 rem;
+    max-height:3rem;
+    border-radius:5px;
+
+}
+
+.form{
+    display:flex;
+    flex-wrap: wrap ;
+}
+
+.numberofsubjects{
+    min-width:15vw;
+    min-height:1.5rem;
+    
+    
+}
+
+.totalsubjectsubmit{
+    min-width:3rem;
+    min-height:1.5rem;
+    background-color: #5B8FB9;
+    font-family:Arial, Helvetica, sans-serif;
+    color:black;
+    font-size:small;
+    font-weight: 600;
+    padding:0.2rem;
+    
+}
+
+.totalsubjectsubmit:hover{
+    background-color: #42a6f8;
+}
+.Enterresult{
+    margin-top:2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grade,#credit{
+    max-width:4rem;
+    max-height:4rem;
+    color:black;
+}
+
+.InputHeading{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:0.3rem;
+}
+
+.gradeandcreditdiv{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right:25vh;
+    margin-left:25vh;
+}
+
+
+.calculatebutton{
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);    padding:0.2rem;
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:small;
+    font-weight: 700;
+}
+
+.resultcard{
+    min-width:50vh;
+    min-height:5vh;
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .confetti {
+    position: absolute;
+    background-color: #f1c40f;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: confetti 1s ease-in-out;
+  }
+  
+  @keyframes confetti {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100vh);
+    }
+  }
+
+ 
