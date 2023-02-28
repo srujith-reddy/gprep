@@ -12,7 +12,9 @@
     <body>
         <div class="wholebody">
             <h2 class="heading">CGPA calculator</h2>
-            <button class="screenshot">From Image</button>
+            <button id="imagedemo" class="screenshot">From Image</button>
+            <input type="file" name="file">
+            YYYY<input type="submit" value="Upload">
             <div class="form">
                 <input type="number" class="numberofsubjects" id="totalsubjects" placeholder="NumberofSubjects" required>
                 <button class="totalsubjectsubmit" id="totalsubjectsubmit">Submit</button>
@@ -36,7 +38,8 @@
 
     </div>
 
-        
+    <button id="imagedemo" class="screenshot">From Image</button> 
+
     <script src={{url_for('static',filename='js/app.js')}}></script>
     </body>
 </html>
