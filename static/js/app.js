@@ -6,6 +6,11 @@ var number_of_subjects=1;
 const confettiContainer = document.getElementById('confetti-container');
 const celebrateButton = document.getElementById('celebrate-button');
 
+const imagepage=document.getElementById('imagedemo');
+imagepage.addEventListener('click',function(){
+  window.location.href='/upload';
+})
+
 function createConfetti() {
   const confetti = document.createElement('div');
   confetti.classList.add('confetti');
@@ -23,6 +28,7 @@ totalsubjectsbuttons.addEventListener('click',function(){
             InputHeading.innerText="Enter the Grade and Credits";
             InputHeading.setAttribute('class','InputHeading');
             form.appendChild(InputHeading);
+            
 
 
 
@@ -66,17 +72,24 @@ totalsubjectsbuttons.addEventListener('click',function(){
                     
                 let result=0;
                 let totalcredits=0;
+                let numerator=0;
+                let middle=0;
     
                  for(var i=0;i<number_of_subjects;i++){
     
                         tempgrade=document.getElementById(`${i}grade`);
                         tempcredit=document.getElementById(`${i}credit`);
-                        tempgrade=tempgrade.value;
-                        tempcredit=tempcredit.value;
+                        tempgrade=parseInt(tempgrade.value);
+                        tempcredit=parseInt(tempcredit.value);
+
+                        console.log(`${tempgrade}\t${tempcredit}`);
                         totalcredits+=tempcredit;
-                        result+=tempgrade*tempcredit;
+                        middle=(tempgrade*tempcredit);
+                        numerator=numerator+middle;
                  }
-                 result=result/totalcredits;    
+                 console.log(`${totalcredits}`);
+                 console.log(`numerator is ${numerator}`);
+                 result=numerator/totalcredits;    
                  console.log(result);
                  const resultcard=document.createElement('div');
                  const resulttext=document.createElement('h4');

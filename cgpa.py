@@ -16,14 +16,11 @@ def home():
     return render_template('app.html')
 
 
-@app.route('/upload', methods=['POST'])
+@app.route('/upload', methods = ['POST'])
 def upload():
-    file = request.files['file']
-    filename = secure_filename(file.filename)
-    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    return render_template('upload.html', filename=filename)
-
-
+   file = request.files['file']
+   file.save(file.filename)
+   return 'File Uploaded Successfully'
 
 
 
